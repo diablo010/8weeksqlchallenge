@@ -9,6 +9,7 @@
 - [Question and Solution](#question-and-solution)
 
 Please note that all the information regarding the case study has been sourced from the following link: [here](https://8weeksqlchallenge.com/case-study-1/). 
+In some questions, two solutions are listed. Out of which, first one is mine and the latter is from the [github repo](https://github.com/katiehuangx/8-Week-SQL-Challenge/tree/main) I referred. 
 
 ***
 
@@ -73,10 +74,10 @@ values  ('A', '2021-01-07'),
   ('B', '2021-01-09');
  
 ````
-Using `create table` and `insert into`, we have created the `dannys_diner` schema. It consists of Danny's 3 datasets: `sales`, `menu`, `members`.
+Using `create table` and `insert into`, we have created the `dannys_diner` schema. It consists of Danny's 3 datasets: `sales`, `menu`, and `members`.
 
 ## :sunglasses: Question and Solution
-***Note: In some questions, two solutions are listed. Out of which, first one is mine and the latter is from the [github repo](https://github.com/katiehuangx/8-Week-SQL-Challenge/tree/main) I referred. 
+
 **1. What is the total amount each customer spent at the restaurant?**
 ````sql
 select customer_id, sum(price)
