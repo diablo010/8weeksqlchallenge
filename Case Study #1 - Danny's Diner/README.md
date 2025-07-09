@@ -2,7 +2,7 @@
 <img src="https://user-images.githubusercontent.com/81607668/127727503-9d9e7a25-93cb-4f95-8bd0-20b87cb4b459.png" alt="Image" width="500" height="520">
 
 
-## Table of Contents
+## :books: Table of Contents
 - [Business Task](#business-task)
 - [Entity Relationship Diagram](#entity-relationship-diagram)
 - [Creating dannys_diner database schema](#creating-dannys_diner-database-schema)
@@ -12,18 +12,18 @@ Please note that all the information regarding the case study has been sourced f
 
 ***
 
-## Business Task
+## :briefcase: Business Task
 Danny wants to use the data to answer a few simple questions about his customers, especially about their visiting patterns, how much money they’ve spent and also which menu items are their favourite. 
 
 ***
 
-## Entity Relationship Diagram
+## :bar_chart: Entity Relationship Diagram
 
 ![image](https://user-images.githubusercontent.com/81607668/127271130-dca9aedd-4ca9-4ed8-b6ec-1e1920dca4a8.png)
 
 ***
 
-## Creating dannys_diner database schema
+## :file_folder: Creating dannys_diner database schema
 
 ````sql
 create database dannys_diner;
@@ -75,7 +75,7 @@ values  ('A', '2021-01-07'),
 ````
 Using `create table` and `insert into`, we have created the `dannys_diner` schema. It consists of Danny's 3 datasets: `sales`, `menu`, `members`.
 
-## Question and Solution
+## :sunglasses: Question and Solution
 ***Note: In some questions, two solutions are listed. Out of which, first one is mine and the latter is from the [github repo](https://github.com/katiehuangx/8-Week-SQL-Challenge/tree/main) I referred. 
 **1. What is the total amount each customer spent at the restaurant?**
 ````sql
