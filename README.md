@@ -15,6 +15,7 @@ It offers 8 real-world inspired case studies to sharpen your SQL skills by solvi
 | #2 - Pizza Runner | Delivery & Operations | MySQL |
 | #3 - Foodie-Fi | Subscription Analytics | MySQL |
 | #4 - Data Bank | Banking & Transactions | PostgreSQL |
+| #5 - Data Mart | Retail & E-Commerce Analytics | PostgreSQL |
 
 ...and more coming soon!
 
