@@ -1,6 +1,6 @@
 # 📈 Case Study #5 - Data Mart
 
-## 🔬 Solution - B. Data Exploration
+## 🗃️ Solution - B. Data Exploration
 
 ### 1. What day of the week is used for each week_date value?
 
@@ -111,3 +111,76 @@ order by calendar_year, month_number;
 <img width="662" height="236" alt="Screenshot 2025-11-02 234714" src="https://github.com/user-attachments/assets/b3cf03cd-8240-428c-a8e0-9c9f42e0ef81" />
 
 > Only first few rows are shown.
+
+### 7. What is the percentage of sales by demographic for each year in the dataset?
+
+```sql
+with demographic_sales as (
+	select
+		calendar_year,
+		demographic,
+		sum(sales) as yearly_sales
+	from data_mart.clean_weekly_sales
+	group by calendar_year, demographic
+)
+
+select 
+	calendar_year,
+	round(100 * sum
+		(case
+			when demographic = 'Couples' then yearly_sales else 0 end)
+			/ sum(yearly_sales), 2) as couples_pct,
+	round(100 * sum
+		(case
+			when demographic = 'Families' then yearly_sales else 0 end)
+			/ sum(yearly_sales), 2) as families_pct,
+	round(100 * sum
+		(case
+			when demographic = 'unknown' then yearly_sales else 0 end)
+			/ sum(yearly_sales), 2) as unknown_pct
+from demographic_sales
+group by calendar_year
+order by calendar_year;
+```
+
+**Answer:**
+
+<img width="664" height="167" alt="Screenshot 2025-11-03 123107" src="https://github.com/user-attachments/assets/5ccb2c97-c220-4ee5-a4e5-5c41af9ebdcc" />
+
+### 8. Which age_band and demographic values contribute the most to Retail sales?
+
+```sql
+select
+	age_band,
+	demographic,
+	sum(sales) as retail_sales,
+	round(100 *
+		sum(sales)
+			/ sum(sum(sales)) over ()	--	nested aggregate is not allowed sum(sum(sales))
+		, 1) as contribution_pct		--	outer sum acts as window
+from data_mart.clean_weekly_sales
+where platform = 'Retail'
+group by age_band, demographic
+order by retail_sales desc;
+```
+
+**Answer:**
+
+<img width="638" height="304" alt="Screenshot 2025-11-03 124925" src="https://github.com/user-attachments/assets/61dbeb84-e825-4cf4-b8b4-e1c8b743ce27" />
+
+### 9. Can we use the `avg_transaction` column to find the average transaction size for each year for Retail vs Shopify? If not - how would you calculate it instead?
+
+```sql
+select
+	calendar_year,
+	platform,
+	round(avg(avg_transaction), 0) as avg_transaction_row,
+	sum(sales) / sum(transactions) as avg_transaction_group
+from data_mart.clean_weekly_sales
+group by calendar_year, platform
+order by calendar_year, platform;
+```
+
+**Answer:**
+
+<img width="867" height="272" alt="Screenshot 2025-11-03 130741" src="https://github.com/user-attachments/assets/e220ccca-2b31-4fee-9ff3-5b975b4148f7" />
