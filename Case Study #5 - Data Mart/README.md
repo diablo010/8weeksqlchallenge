@@ -8,7 +8,7 @@
 - [Entity Relationship Diagram](#-entity-relationship-diagram)
 - [Creating data_mart Database Schema](#-creating-data_mart-database-schema)
 
-Please note that all the information regarding the case study has been sourced from the following link: [here](https://8weeksqlchallenge.com/case-study-4/).  
+Please note that all the information regarding the case study has been sourced from the following link: [here](https://8weeksqlchallenge.com/case-study-5/).  
 I referred this [github repo](https://github.com/katiehuangx/8-Week-SQL-Challenge/tree/main) for some of my solutions. 
 ***
 
