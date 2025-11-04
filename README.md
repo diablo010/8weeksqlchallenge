@@ -16,6 +16,9 @@ It offers 8 real-world inspired case studies to sharpen your SQL skills by solvi
 | #3 - Foodie-Fi | Subscription Analytics | MySQL |
 | #4 - Data Bank | Banking & Transactions | PostgreSQL |
 | #5 - Data Mart | Retail & E-Commerce Analytics | PostgreSQL |
+| #6 - Clique Bait | Digital Marketing & Web Analytics | PostgreSQL |
+<!-- | #7 - Balanced Tree Clothing Co. | E-Commerce & Sales Performance | PostgreSQL |
+| #8 - Fresh Segments | Marketing & Data Enrichment | - | -->
 
 ...and more coming soon!
 

@@ -15,8 +15,8 @@ Clique Bait is not like your regular online seafood store - the founder and CEO 
 
 In this case study - you are required to support Danny’s vision and analyse his dataset and come up with creative solutions to calculate funnel fallout rates for the Clique Bait online store.
 
-## 📁 Creating data_mart Database Schema
-All datasets exist within the data_bank database schema - namely `event_identifier`, `campaign_identifier`, `page_hierarchy`, `users` and `events`.
+## 📁 Creating clique_bait Database Schema
+All datasets exist within the clique_bait database schema - namely `event_identifier`, `campaign_identifier`, `page_hierarchy`, `users` and `events`.
 
 ```sql
 create schema clique_bait;

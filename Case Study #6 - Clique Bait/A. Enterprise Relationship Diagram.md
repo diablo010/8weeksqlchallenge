@@ -50,4 +50,4 @@ Ref: page_hierarchy.page_id < events.page_id
 
 Following is the ERD for clique_bait Database Schema:
 
-<img width="968" height="460" alt="Untitled" src="https://github.com/user-attachments/assets/ce162b4e-3467-4b80-8374-39273ff95ce4" />
+<img width="600" height="270" alt="Untitled" src="https://github.com/user-attachments/assets/ce162b4e-3467-4b80-8374-39273ff95ce4" />
